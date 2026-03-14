@@ -590,6 +590,199 @@ pre {
     color: var(--bg-color);
 }
 
+/* Certifications */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    background: linear-gradient(180deg, rgba(26, 32, 40, 0.9), rgba(22, 27, 34, 0.95));
+    border: var(--border);
+    border-radius: 16px;
+    padding: 1.8rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(88, 166, 255, 0.15) 0%, transparent 70%);
+    filter: blur(10px);
+    opacity: 0.6;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+.cert-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e8f1ff;
+    font-size: 1.2rem;
+}
+
+.cert-logo.cpp span {
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.cert-logo.aws {
+    background: rgba(255, 153, 0, 0.12);
+    border-color: rgba(255, 153, 0, 0.35);
+    color: #ffbf69;
+}
+
+.cert-logo.udemy {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cert-logo.devops {
+    background: rgba(0, 204, 255, 0.12);
+    border-color: rgba(0, 204, 255, 0.35);
+    color: #7bdfff;
+}
+
+.cert-pill-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.cert-badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgba(88, 166, 255, 0.15);
+    border: 1px solid rgba(88, 166, 255, 0.35);
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.cert-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.cert-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-issuer {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-actions {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Publications */
+.pubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.pub-card {
+    background: var(--card-bg);
+    border: var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pub-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.pub-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pub-type {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    background: rgba(255, 107, 107, 0.15);
+    border: 1px solid rgba(255, 107, 107, 0.35);
+    color: #ffb4b4;
+}
+
+.pub-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.pub-venue {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0.6rem 0 0.8rem;
+}
+
+.pub-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.pub-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 
 /* Contact Section */
 .contact-content {
